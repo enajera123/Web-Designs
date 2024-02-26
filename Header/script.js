@@ -24,10 +24,8 @@ const showMenu = (toggleId, navId) =>{
      dropdownButton.addEventListener('click', () =>{
          // 7. Select the current show-dropdown class
          const showDropdown = document.querySelector('.show-dropdown')
-         
          // 5. Call the toggleItem function
          toggleItem(item)
- 
          // 8. Remove the show-dropdown class from other items
          if(showDropdown && showDropdown!== item){
              toggleItem(showDropdown)

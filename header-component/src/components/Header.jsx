@@ -1,6 +1,4 @@
-import { RiMenuLine, RiCloseLine, RiArrowUpDownLine, RiArrowDownLine, RiFlashlightLine, RiHeart2Line, RiHeart3Line, RiBookMarkedLine, RiFilePaper2Line } from "@remixicon/react"
-import Dropdown from './Dropdown'
-import NavItem from "./NavItem"
+import { RiMenuLine, RiCloseLine} from "@remixicon/react"
 import NavBar from "./NavBar"
 
 function Header() {
