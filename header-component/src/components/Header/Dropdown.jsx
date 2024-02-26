@@ -1,5 +1,6 @@
 import { RiArrowDropDownLine } from "@remixicon/react"
 import { useRef } from "react"
+import Dropdown_content from "./Dropdown_content"
 function Dropdown({ title, items }) {
     const dropdownButtonRef = useRef(null)
     const toggleItem = (item) => {
@@ -26,29 +27,17 @@ function Dropdown({ title, items }) {
     }
     return (
         <>
-            <li class="dropdown__item" ref={dropdownButtonRef}>
-                <div onClick={dropdownItem} class="nav__link dropdown__button">
+            <li className="dropdown__item" ref={dropdownButtonRef}>
+                <div onClick={dropdownItem} className="nav__link dropdown__button">
                     {title} <RiArrowDropDownLine className="dropdown__arrow" />
                 </div>
-                <div class="dropdown__container" onClick={toggleItem}>
-                    <div class="dropdown__content">
-
-                        {items.map((item) => (
-                            <>
-                                <div class="dropdown__group">
-                                    <div class="dropdown__icon">
-                                        {item.icon}
-                                    </div>
-                                    < span class="dropdown__title" >{item.title}</span>
-                                    <ul className="dropdow__list">
-                                        {item.subItems.map((subItem) => (
-                                            <li>
-                                                <a href={subItem.link} class="dropdown__link">{subItem.title}</a>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </>
+                <div className="dropdown__container" onClick={toggleItem}>
+                    <div className="dropdown__content">
+                        {items.map((item, index) => (
+                            <Dropdown_content
+                            item={item}
+                            key={index}
+                            />
                         ))}
                     </div>
                 </div>

@@ -10,12 +10,12 @@ function Header() {
     }
     return (
         <header className="header">
-            <nav class="nav container">
-                <div class="nav__data">
-                    <a href="#" class="nav__logo">
-                        <i class="ri-code-s-slash-line"></i> CodeBox
+            <nav className="nav container">
+                <div className="nav__data">
+                    <a href="#" className="nav__logo">
+                        <i className="ri-code-s-slash-line"></i> CodeBox
                     </a>
-                    <div class="nav__toggle" id="nav-toggle">
+                    <div className="nav__toggle" id="nav-toggle">
                         <RiMenuLine
                             onClick={showMenu}
                             className='nav__toggle-menu'
